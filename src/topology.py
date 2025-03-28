@@ -7,7 +7,7 @@ from mininet.node import OVSKernelSwitch, RemoteController
 
 class MassiveTreeTopo(Topo):
     def build(self):
-        n_core, n_agg, n_acc, n_hosts = 6, 6, 6, 16
+        n_core, n_agg, n_acc, n_hosts = 2, 2, 4, 8
 
         cores = [self.addSwitch(f's{i+1}', cls=OVSKernelSwitch, protocols='OpenFlow13') 
                  for i in range(n_core)]
